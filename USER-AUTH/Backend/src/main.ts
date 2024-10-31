@@ -2,8 +2,8 @@ import express from "express";
 
 const app = express()
 
-app.get('/',(req,res)=>{
-  res.send("hello")
+app.get('/login',(req,res)=>{
+  res.send("This is login page")
 })
 
 app.listen(4000,()=>{
