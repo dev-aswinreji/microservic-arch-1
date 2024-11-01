@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  user-auth:
+    build:
+      context: ./USER-AUTH/Backend/src/
+    ports:
+      - "4000:4000"
+
+  user-home:
+    build:
+      context: ./USER-HOME/Backend/src/
+    ports:
+      - "4001:4001"
+
+networks:
+  default:
+    driver: bridge

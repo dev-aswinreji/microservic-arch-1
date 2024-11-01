@@ -18,7 +18,7 @@ RUN deno cache deno.json
 COPY . /app/
 
 # Expose the necessary port
-EXPOSE 4000
+EXPOSE 4001
 
 # Command to run the application, granting necessary permissions
-CMD ["deno", "run", "--allow-read", "--allow-env", "--allow-net", "main.ts"]
+CMD ["deno", "run", "--allow-read", "--allow-env", "--allow-net", "main.ts","preview"]
