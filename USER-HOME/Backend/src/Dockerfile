@@ -4,15 +4,15 @@ FROM archlinux:latest
 # Initialize pacman keys, update system, and install Deno
 RUN pacman-key --init && \
     pacman -Syu --noconfirm && \
-    pacman -S deno --noconfirm && \
-    deno upgrade
+    pacman -S yarn nodejs ts-node --noconfirm
+
 
 # Set the working directory
 WORKDIR /app
 
 # Copy Deno configuration files and cache dependencies
-COPY deno.json deno.lock /app/
-RUN deno cache deno.json
+COPY package.json yarn.lock /app/
+RUN yarn install
 
 # Copy the entire project after caching dependencies
 COPY . /app/
@@ -21,4 +21,4 @@ COPY . /app/
 EXPOSE 4001
 
 # Command to run the application, granting necessary permissions
-CMD ["deno", "run", "--allow-read", "--allow-env", "--allow-net", "main.ts","preview"]
+CMD ["yarn", "start"]
