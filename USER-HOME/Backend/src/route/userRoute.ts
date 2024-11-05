@@ -1,5 +1,8 @@
-import express from "npm:express";
+import express from "express";
+import userHome from "../controller/userController";
 
 const route = express.Router();
 
-route.get("/");
+route.get("/", userHome);
+
+export default route;

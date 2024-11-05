@@ -5,8 +5,12 @@
   "main": "app.ts",
   "author": "Aswin Reji",
   "license": "MIT",
+  "scripts": {
+    "start": "nodemon app.ts"
+  },
   "devDependencies": {
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "typescript": "^5.6.3"
   },
   "dependencies": {
     "@types/express": "^5.0.0",
