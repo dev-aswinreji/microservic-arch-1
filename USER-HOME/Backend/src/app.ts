@@ -6,6 +6,6 @@ const app = express();
 
 app.use("/", route);
 
-app.listen(PORT, () => {
+app.listen(4000, () => {
   console.log(`Server is running http:localhost:${PORT}/login`);
 });
