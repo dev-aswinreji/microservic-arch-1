@@ -6,8 +6,8 @@ export default function Home() {
         fetch("http://localhost:4001/home")
             .then((res) => res.json())
             .then(data => setHome(data.message))
-    }, [])
-    console.log(home, 'data is here');
+    }, [home])
+    
     return (
         <>
             {home}
