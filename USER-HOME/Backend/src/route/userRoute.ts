@@ -3,6 +3,6 @@ import userHome from "../controller/userController";
 
 const route = express.Router();
 
-route.get("/", userHome);
+route.get("/home", userHome);
 
 export default route;

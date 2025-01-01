@@ -3,7 +3,7 @@ services:
 
   user-home:
     build:
-      context: ./USER-HOME/Backend/src/
+      context: ./USER-HOME/Backend/
     ports:
       - "4001:4001"
   user-auth:
