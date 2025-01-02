@@ -7,11 +7,12 @@ export default function Home() {
             .then((res) => res.json())
             .then(data => setHome(data.message))
     }, [home])
-    
+
     return (
         <>
-            {home}
-            {/* <h1>Home is here</h1> */}
+            <div className="text-center font-bold py-11">
+                {home}
+            </div>
         </>
     )
 }
