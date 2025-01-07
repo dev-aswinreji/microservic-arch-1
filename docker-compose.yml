@@ -3,17 +3,22 @@ services:
 
   user-home-backend:
     build:
-      context: ./USER-HOME/Backend/
+      context: ../USER-HOME/Backend/
     ports:
-      - "4002:4001"
+      - "4002:4002"
+  user-home-frontend:
+    build:
+      context: ../USER-HOME/Frontend/
+    ports:
+      - "4003":"4003"
   user-auth-backend:
     build:
-      context: ./USER-AUTH/Backend/
+      context: ../USER-AUTH/Backend/
     ports:
       - "4000:4000"
   user-auth-frontend:
     build:
-      context: ./USER-AUTH/Frontend/
+      context: ../USER-AUTH/Frontend/
     ports:
       - "4001:4001"
 
