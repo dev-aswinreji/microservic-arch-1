@@ -10,7 +10,7 @@ services:
     build:
       context: ../USER-HOME/Frontend/
     ports:
-      - "4003":"4003"
+      - "4003:4003"
   user-auth-backend:
     build:
       context: ../USER-AUTH/Backend/
