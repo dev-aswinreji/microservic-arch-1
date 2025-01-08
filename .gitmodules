@@ -1,3 +1,6 @@
 [submodule "User-Auth-Service"]
 	path = User-Auth-Service
 	url = git@github.com:dev-aswinreji/User-Auth-Service
+[submodule "User-Home-Service"]
+	path = User-Home-Service
+	url = git@github.com:dev-aswinreji/User-Home-Service
